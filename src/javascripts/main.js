@@ -1,10 +1,9 @@
 import 'bootstrap';
 import '../styles/main.scss';
-import EatBarButtons from './components/eat';
+import eatBarButtons from './components/eat';
 
-const init {
-    //maybe this should be data--move eatbarbuttons to data file.
-    EatBarButtons.();
+const init = () => {
+  eatBarButtons.eatBarButtons();
 };
 
 init();
