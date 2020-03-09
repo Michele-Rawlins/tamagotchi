@@ -14,12 +14,36 @@ const feedEvents = () => {
   }
 };
 
+
+const move = () => {
+  let i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+};
+
+
+
+
+
 const eatBarButtons = () => {
   let domString = '';
   domString += '<div id = "eatQuad" >';
   domString += '<h2>Eat</h2>';
   domString += '<div id="myProgress">';
-  domString += '<div id="eatBar"></div>';
+  domString += '<div id="myBar"></div>';
   domString += '<div class = "row">';
   domString += '<button id = "unhealthy"><i class="fas fa-bacon"></i>Unhealthy</button>';
   domString += '<button id = "healthy"><i class="fas fa-apple-alt"></i>Healthy</button>';
