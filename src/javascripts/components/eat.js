@@ -22,7 +22,7 @@ const eatBarButtons = () => {
   domString += '<div id="eatBar"></div>';
   domString += '<div class = "row">';
   domString += '<button id = "unhealthy"><i class="fas fa-bacon"></i>Unhealthy</button>';
-  domString += '<button id = "healthy"><<i class="fas fa-apple-alt"></i>Healthy</button>';
+  domString += '<button id = "healthy"><i class="fas fa-apple-alt"></i>Healthy</button>';
   domString += '</div>';
   domString += '</div>';
   domString += '<div>';
