@@ -3,40 +3,17 @@ import utils from '../helpers/utils';
 const feedMe = (e) => {
   const eatId = e.target.closest('.button').id;
   document.getElementById('unhealthy').innerHTML = 'Unhealhty';
+  document.getElementById('healthy').innerHTML = 'healthy';
   console.error(eatId);
 };
 
 
 const feedEvents = () => {
   const feedButtons = document.getElementsById('unhealthy');
-  for (let i = 0; i < feedButtons.length; i += 1) {
+  for (let i = -10; i < feedButtons.length; i += 1) {
     feedButtons[i].addEventListener('click', feedMe);
   }
 };
-
-
-const move = () => {
-  let i = 0;
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
-  }
-};
-
-
-
-
 
 const eatBarButtons = () => {
   let domString = '';
@@ -45,8 +22,8 @@ const eatBarButtons = () => {
   domString += '<div id="myProgress">';
   domString += '<div id="myBar"></div>';
   domString += '<div class = "row">';
-  domString += '<button id = "unhealthy"><i class="fas fa-bacon"></i>Unhealthy</button>';
-  domString += '<button id = "healthy"><i class="fas fa-apple-alt"></i>Healthy</button>';
+  domString += '<button class="button" id = "unhealthy"><i class="fas fa-bacon"></i>Unhealthy</button>';
+  domString += '<button class="button" id = "healthy"><i class="fas fa-apple-alt"></i>Healthy</button>';
   domString += '</div>';
   domString += '</div>';
   domString += '<div>';
@@ -59,24 +36,23 @@ const eatBarButtons = () => {
 };
 
 // const createHouseButton = (house) => {
-  // const domString = `
-    // <button id="${house.id}" class="house-button house-button-${house.name.toLowerCase()}">
-      // <div>${house.name}</div>
-      // <img src="${house.picture}">
-    // </button>
-  // `;
-  // return domString;
+// const domString = `
+// <button id="${house.id}" class="house-button house-button-${house.name.toLowerCase()}">
+// <div>${house.name}</div>
+// <img src="${house.picture}">
+// </button>
+// `;
+// return domString;
 // };
-// 
-// const buttonEventFunction = (e) => {
-  // const houseId = e.target.closest('button').id;
-  // const students = studentData.getStudents();
-  // const filteredStudents = students.filter((x) => x.houseId === houseId);
-  // studentList.createStudentList(filteredStudents);
-// };
-// 
-export default { createHouseButton, buttonEventFunction };
 
+// const buttonEventFunction = (e) => {
+// const houseId = e.target.closest('button').id;
+// const students = studentData.getStudents();
+// const filteredStudents = students.filter((x) => x.houseId === houseId);
+// studentList.createStudentList(filteredStudents);
+// };
+
+// export default { createHouseButton, buttonEventFunction };
 
 
 export default { eatBarButtons };
