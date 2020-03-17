@@ -12,8 +12,13 @@ body {
     margin: 0;
 }
 
-button {
-   margin: 10px left;
+h2 {
+    margin: 50px;
+}
+
+.row {
+   margin: 15px;
+   padding: 5px;
 
 }
 .progress-bar {
@@ -40,4 +45,19 @@ button {
     padding: 1em;
 
 
+}
+
+.quad#eat {
+    background-color: darkcyan;
+}
+
+.quad#fight {
+    background-color: darkred;
+}
+
+.quad#play {
+    background-color: yellow;
+}
+.quad#sleep {
+    background-color: gray;
 }
