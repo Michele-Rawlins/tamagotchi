@@ -33,10 +33,12 @@ h2 {
     content: attr(data-label);
     display: flex;
     align-items: center;
+    
     position: absolute;
     left: 1em;
     top: .5em;
     bottom: 5em;
+    right: 1em;
     width: calc(var(--width, 0) * 1%);
     min-width: 2rem;
     max-width: calc(100% - 1em);
@@ -49,6 +51,7 @@ h2 {
 
 .quad#eat {
     background-color: darkcyan;
+
 }
 
 .quad#fight {
